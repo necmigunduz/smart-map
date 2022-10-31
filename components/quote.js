@@ -19,7 +19,7 @@ const Quote = () => {
   return (
     <View>
       <View>
-        <Text style={styles.title}>Quote of day</Text>
+        <Text style={styles.title}>Quote of Day</Text>
         <TouchableOpacity onPress={handleButton} style={styles.button}>
           <Text style={styles.btnText}>Update</Text>
         </TouchableOpacity>
@@ -27,11 +27,15 @@ const Quote = () => {
           <Text style={styles.loading}>
             Click on Update button to see the quote of day.
           </Text>
-        ) : (
-          <View>
+        ) : quote ? (
+          <View style={styles.card}>
+            <Text style={styles.dashes}>---------------------</Text>
             <Text style={styles.text}>"{quote}"</Text>
             <Text style={styles.auth}>{auth}</Text>
+            <Text style={styles.dashes}>---------------------</Text>
           </View>
+        ) : (
+          <Text style={styles.loading}>Loading...</Text>
         )}
       </View>
     </View>
@@ -52,6 +56,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'white',
     fontWeight: 'bold',
+  },
+  card: {
+    backgroundColor: 'lightgray',
+    marginHorizontal: 20,
   },
   title: {
     backgroundColor: 'gray',
@@ -81,6 +89,12 @@ const styles = StyleSheet.create({
   },
   loading: {
     textAlign: 'center',
+  },
+  dashes: {
+    letterSpacing: 10,
+    textAlign: 'center',
+    color: 'white',
+    fontSize: 18,
   },
 });
 

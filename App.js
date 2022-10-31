@@ -11,11 +11,13 @@ import {StyleSheet, Text, View, Button} from 'react-native';
 import {Provider} from 'react-redux';
 import {store} from './redux/store';
 import Quote from './components/quote';
+import Footer from './components/footer';
 const App = () => {
   return (
     <Provider store={store}>
       <View>
         <Quote />
+        <Footer />
       </View>
     </Provider>
   );
