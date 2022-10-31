@@ -9,6 +9,7 @@ const Quotes = () => {
 
   const handleButton = () => {
     dispatch(getQuotes());
+    console.log('clicked!')
   };
 
   return (
@@ -19,7 +20,7 @@ const Quotes = () => {
       ) : (
         <View>
           {quotes.map(q => (
-            <Text>{q.content}</Text>
+            <Text key={q.id}>{q.content}</Text>
           ))}
         </View>
       )}
