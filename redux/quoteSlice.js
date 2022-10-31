@@ -24,6 +24,7 @@ const quoteSlice = createSlice({
       })
       .addCase(getQuotes.fulfilled, (state, action) => {
         state.quotes = action.payload;
+        state.isLoading = false;
       })
       .addCase(getQuotes.rejected, state => {
         state.isLoading = false;
