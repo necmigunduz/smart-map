@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Button, Text, TouchableOpacity} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {getQuote} from '../redux/quoteSlice';
@@ -9,6 +9,13 @@ const Quote = () => {
   const [auth, setAuth] = useState('');
   const {quotes} = useSelector(state => state.quotes);
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getQuote());
+    setQuote(quotes.content);
+    setAuth(quotes.author);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [quote, auth]);
+
   const handleButton = () => {
     dispatch(getQuote());
     setQuote(quotes.content);
@@ -23,11 +30,7 @@ const Quote = () => {
         <TouchableOpacity onPress={handleButton} style={styles.button}>
           <Text style={styles.btnText}>Update</Text>
         </TouchableOpacity>
-        {quote === '' ? (
-          <Text style={styles.loading}>
-            Click on Update button to see the quote of day.
-          </Text>
-        ) : quote ? (
+        {quote ? (
           <View style={styles.card}>
             <Text style={styles.dashes}>----------------</Text>
             <Text style={styles.text}>"{quote}"</Text>
@@ -35,7 +38,9 @@ const Quote = () => {
             <Text style={styles.dashes}>----------------</Text>
           </View>
         ) : (
-          <Text style={styles.loading}>Loading...</Text>
+          <Text style={styles.loading}>
+            Click on Update to see day of quote
+          </Text>
         )}
       </View>
     </View>
