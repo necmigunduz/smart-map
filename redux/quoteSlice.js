@@ -2,33 +2,24 @@ import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 
 const initialState = {
   quotes: [],
-  isLoading: false,
 };
-export const getQuotes = createAsyncThunk('quotes/getQuotes', async () => {
+export const getQuote = createAsyncThunk('quote/getQuote', async () => {
   try {
-    const res = await fetch('https://api.quotable.io/quotes');
-    const quotes = await res.json();
-    return quotes.results;
+    const res = await fetch('https://api.quotable.io/random');
+    const quote = await res.json();
+    return quote;
   } catch (error) {
     console.log(error);
   }
 });
 const quoteSlice = createSlice({
-  name: 'quotes',
+  name: 'quote',
   initialState: initialState,
   reducers: {},
   extraReducers: builder => {
-    builder
-      .addCase(getQuotes.pending, state => {
-        state.isLoading = true;
-      })
-      .addCase(getQuotes.fulfilled, (state, action) => {
-        state.quotes = action.payload;
-        state.isLoading = false;
-      })
-      .addCase(getQuotes.rejected, state => {
-        state.isLoading = false;
-      });
+    builder.addCase(getQuote.fulfilled, (state, action) => {
+      state.quotes = action.payload;
+    });
   },
 });
 
