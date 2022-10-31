@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: 20,
     color: 'white',
+    fontWeight: 'bold',
   },
   title: {
     backgroundColor: 'gray',
