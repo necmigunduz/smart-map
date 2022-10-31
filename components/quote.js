@@ -23,7 +23,7 @@ const Quote = () => {
         <TouchableOpacity onPress={handleButton} style={styles.button}>
           <Text style={styles.btnText}>Update</Text>
         </TouchableOpacity>
-        {quote.length === 0 ? (
+        {quote === '' ? (
           <Text style={styles.loading}>
             Click on Update button to see the quote of day.
           </Text>
