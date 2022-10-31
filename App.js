@@ -15,7 +15,7 @@ import Footer from './components/footer';
 const App = () => {
   return (
     <Provider store={store}>
-      <View>
+      <View style={styles.body}>
         <Quote />
         <Footer />
       </View>
@@ -24,15 +24,9 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  text: {
-    textAlign: 'center',
-    fontSize: 50,
-    fontWeight: 'bold',
-    backgroundColor: 'green',
-    color: 'white',
-  },
-  button: {
-    backgroundColor: 'black',
+  body: {
+    backgroundColor: '#79c2d0',
+    height: 900,
   },
 });
 

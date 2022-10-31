@@ -29,10 +29,10 @@ const Quote = () => {
           </Text>
         ) : quote ? (
           <View style={styles.card}>
-            <Text style={styles.dashes}>---------------------</Text>
+            <Text style={styles.dashes}>----------------</Text>
             <Text style={styles.text}>"{quote}"</Text>
             <Text style={styles.auth}>{auth}</Text>
-            <Text style={styles.dashes}>---------------------</Text>
+            <Text style={styles.dashes}>----------------</Text>
           </View>
         ) : (
           <Text style={styles.loading}>Loading...</Text>
@@ -44,7 +44,7 @@ const Quote = () => {
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    backgroundColor: 'lightgray',
+    backgroundColor: '#53a8b6',
     padding: 10,
     color: 'black',
     width: 200,
@@ -58,11 +58,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   card: {
-    backgroundColor: 'lightgray',
+    backgroundColor: '#bbe4e9',
     marginHorizontal: 20,
+    borderRadius: 50,
   },
   title: {
-    backgroundColor: 'gray',
+    backgroundColor: '#5585b5',
     color: 'white',
     height: 100,
     textAlign: 'center',
@@ -77,8 +78,8 @@ const styles = StyleSheet.create({
   text: {
     paddingVertical: 20,
     paddingHorizontal: 15,
-    textAlign: 'justify',
-    marginHorizontal: 25,
+    textAlign: 'left',
+    marginHorizontal: 10,
     fontSize: 16,
     fontStyle: 'italic',
   },
@@ -91,10 +92,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   dashes: {
-    letterSpacing: 10,
+    letterSpacing: 8,
     textAlign: 'center',
-    color: 'white',
-    fontSize: 18,
+    color: '#5585b5',
+    fontSize: 30,
   },
 });
 
