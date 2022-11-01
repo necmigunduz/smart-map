@@ -1,35 +1,34 @@
 # Quote of Day
 
-- This project fetching random quotes from `https://opensourcelibs.com/lib/quotable` and exhiting them on a mobile app developed by using React-Native.
+- This project fetching random quotes from `https://opensourcelibs.com/lib/quotable` and exhiting them on a mobile app developed by using React-Native. A user can press on button or pull down the screen to refresh and see a new quote.
 
 ### Main page
 
-![Photo](https://github.com/necmigunduz/christmas-lights/blob/lights-branch/assets/screenshot.png)
-
-## Live Demo
-
-- [Project Link](https://venerable-torte-991c0b.netlify.app/)
+![Photo](https://github.com/necmigunduz/smart-map/blob/master/assets/screenshot.jpeg)
 
 ## Built with
 
 - HTML,
 - CSS,
-- Javascript.
+- Javascript,
+- React-Native,
+- Redux Toolkit.
 
 ## Getting Started
 
-- Clone the repo `https://github.com/necmigunduz/christmas-lights.git`.
-- cd `into` the project.
-- Open index.html with any web browser or run the Liveserver from VSCode.
+- Clone the repo `git@github.com:necmigunduz/smart-map.git`,
+- `cd smart-map` to get into the project folder,
+- `npm install` to install dependencies,
+- create a 'local.properties' file in the android folder included in the root folder,
+- add the 'sdk.dir' adress in your operating system to 'local.properties' file,
+  (For instance, if you are using Linux, add `sdk.dir = /home/USERNAME/Android/Sdk` to 'local.properties').
+- make sure JAVA_HOME is defined properly in your system, 
+  (Go to /usr/lib/jvm/ in your system folders and find the JDK folder, and then check JAVA_HOME by running `echo $JAVA_HOME`, make sure that the name of the JDK folder name is the same with 'JAVA_HOME'.)
+- `npx react-native  run-android` to install the app on your phone, or make sure your Android   Studio is running,
+- `npx react-native start` to run the app.
 
-## Authors
 
-👤 **Samson Kibrom**
-
-- Github: [@SamArsanios](https://github.com/SamArsanios)
-- Twitter: [@SamArsanios](https://twitter.com/SamArsanios)
-- Linkedin: [@Samson](https://www.linkedin.com/in/samson-kibrom)
-
+## Author
 👤 **Necmi Gunduz**
 
 - LinkedIn: [Necmi Gunduz](https://www.linkedin.com/in/necmigunduz/)
