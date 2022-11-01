@@ -18,7 +18,7 @@ const wait = timeout => {
 
 const Quote = () => {
   // Setting quote and its author to be published
-  const [quote, setQuote] = useState('');
+  const [quote, setQuote] = useState('Welcome to Quote of Day App!');
   const [auth, setAuth] = useState(null);
   // Setting state of refreshing for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
