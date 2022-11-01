@@ -124,10 +124,12 @@ const styles = StyleSheet.create({
   auth: {
     fontWeight: '900',
     textAlign: 'right',
-    marginRight: 50,
+    marginRight: 30,
   },
   loading: {
     textAlign: 'center',
+    marginHorizontal: 50,
+    fontWeight: 'bold',
   },
   dashes: {
     letterSpacing: 8,
