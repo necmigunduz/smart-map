@@ -32,7 +32,7 @@ const Quote = () => {
     dispatch(getQuote());
     setQuote(quotes.content);
     setAuth(quotes.author);
-    console.log('quote');
+    console.log(quote);
     // Stopping spin
     wait(300).then(() => setRefreshing(false));
   };
@@ -52,7 +52,7 @@ const Quote = () => {
         }>
         <Text style={styles.title}>Quote of Day</Text>
         <TouchableOpacity onPress={handleButton} style={styles.button}>
-          <Text style={styles.btnText}>Update</Text>
+          <Text style={styles.btnText}>Refresh Quote</Text>
         </TouchableOpacity>
         {quote ? (
           <View style={styles.card}>
@@ -61,7 +61,8 @@ const Quote = () => {
           </View>
         ) : (
           <Text style={styles.loading}>
-            Click on Update to see day of quote
+            Click on Refresh button above or pull down to see the quote of the
+            day
           </Text>
         )}
       </ScrollView>
@@ -73,12 +74,12 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     backgroundColor: '#53a8b6',
-    padding: 10,
+    padding: 2,
     color: 'black',
-    width: 200,
+    width: 250,
     borderRadius: 50,
     marginVertical: 20,
-    marginHorizontal: '24%',
+    marginHorizontal: '15%',
   },
   btnText: {
     fontSize: 20,
