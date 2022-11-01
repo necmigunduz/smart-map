@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Provider} from 'react-redux';
 import {store} from './redux/store';
 import Quote from './components/quote';

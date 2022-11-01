@@ -19,7 +19,7 @@ const wait = timeout => {
 const Quote = () => {
   // Setting quote and its author to be published
   const [quote, setQuote] = useState('');
-  const [auth, setAuth] = useState('');
+  const [auth, setAuth] = useState(null);
   // Setting state of refreshing for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
   // Accessing state through Redux Toolkit store
