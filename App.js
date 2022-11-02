@@ -12,7 +12,8 @@ import {Provider} from 'react-redux';
 import {store} from './redux/store';
 import Quote from './components/quote';
 import Footer from './components/footer';
-import TopNav from './components/topNav';
+import SettingIcon from './components/settingIcon';
+import Settings from './components/settings';
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
   return (
@@ -29,11 +30,11 @@ const App = () => {
             }}>
             <View style={styles.centeredView}>
               <View style={styles.modalView}>
-                <Text style={styles.modalText}>Hello World!</Text>
+                <Settings />
                 <Pressable
                   style={[styles.button, styles.buttonClose]}
                   onPress={() => setModalVisible(!modalVisible)}>
-                  <Text style={styles.textStyle}>Hide Modal</Text>
+                  <Text style={styles.textStyle}>Close Settings</Text>
                 </Pressable>
               </View>
             </View>
@@ -41,7 +42,7 @@ const App = () => {
           <Pressable
             style={styles.buttonOpen}
             onPress={() => setModalVisible(true)}>
-            <TopNav />
+            <SettingIcon />
           </Pressable>
         </View>
         <Quote />
@@ -64,9 +65,10 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
+    backgroundColor: '#79c2d0',
+    borderRadius: 50,
+    height: 550,
+    width: 320,
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -76,6 +78,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
+    borderColor: 'white',
+    borderWidth: 1,
   },
   button: {
     borderRadius: 20,
@@ -83,7 +87,15 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   buttonClose: {
-    backgroundColor: '#2196F3',
+    backgroundColor: '#53a8b6',
+    color: 'white',
+    fontWeight: 'bold',
+    borderColor: 'white',
+    borderWidth: 1,
+    paddingHorizontal: 55,
+    paddingVertical: 8,
+    borderRadius: 50,
+
   },
   textStyle: {
     color: 'white',

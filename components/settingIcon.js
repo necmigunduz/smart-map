@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const TopNav = () => {
+const SettingIcon = () => {
   return (
     <View style={styles.container}>
       <Text>Choose keyword for random quotes</Text>
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
 });
-export default TopNav;
+export default SettingIcon;
