@@ -11,10 +11,64 @@ const Settings = () => {
         selectedValue={keyword}
         onValueChange={(itemValue, itemIndex) => setKeyword(itemValue)}
         style={styles.picker}>
-        <Picker.Item label="Java" value="Java" style={styles.pickerItem} />
         <Picker.Item
-          label="JavaScript"
-          value="Javascript"
+          label="Athletics"
+          value="athletics"
+          style={styles.pickerItem}
+        />
+        <Picker.Item
+          label="Business"
+          value="business"
+          style={styles.pickerItem}
+        />
+        <Picker.Item label="Change" value="change" style={styles.pickerItem} />
+        <Picker.Item
+          label="Character"
+          value="character"
+          style={styles.pickerItem}
+        />
+        <Picker.Item
+          label="Competition"
+          value="competition"
+          style={styles.pickerItem}
+        />
+        <Picker.Item
+          label="Conservative"
+          value="conservative"
+          style={styles.pickerItem}
+        />
+        <Picker.Item
+          label="Courage"
+          value="courage"
+          style={styles.pickerItem}
+        />
+        <Picker.Item
+          label="Education"
+          value="education"
+          style={styles.pickerItem}
+        />
+        <Picker.Item label="Faith" value="faith" style={styles.pickerItem} />
+        <Picker.Item label="Family" value="family" style={styles.pickerItem} />
+        <Picker.Item label="Film" value="film" style={styles.pickerItem} />
+        <Picker.Item
+          label="Freedom"
+          value="freedom"
+          style={styles.pickerItem}
+        />
+        <Picker.Item
+          label="Friendship"
+          value="friendship"
+          style={styles.pickerItem}
+        />
+        <Picker.Item label="Future" value="future" style={styles.pickerItem} />
+        <Picker.Item
+          label="Happiness"
+          value="happiness"
+          style={styles.pickerItem}
+        />
+        <Picker.Item
+          label="History"
+          value="History"
           style={styles.pickerItem}
         />
       </Picker>
@@ -42,7 +96,8 @@ const styles = StyleSheet.create({
     height: 20,
   },
   pickerItem: {
-    backgroundColor: '#53a8b6',
+    backgroundColor: 'lightgray',
+    marginEnd: 2,
   },
   selected: {
     color: 'black',
