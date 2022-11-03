@@ -22,8 +22,8 @@ const Settings = () => {
         style={styles.picker}>
         <Picker.Item label="Please select an option..." value="0" />
         <Picker.Item
-          label="Athletics"
-          value="athletics"
+          label="Famous quotes"
+          value="famous-quotes"
           style={styles.pickerItem}
         />
         <Picker.Item
@@ -74,11 +74,6 @@ const Settings = () => {
         <Picker.Item
           label="Happiness"
           value="happiness"
-          style={styles.pickerItem}
-        />
-        <Picker.Item
-          label="History"
-          value="History"
           style={styles.pickerItem}
         />
       </Picker>
