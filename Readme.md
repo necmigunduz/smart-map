@@ -1,6 +1,6 @@
 # Quote of Day
 
-- This project fetching random quotes from `https://opensourcelibs.com/lib/quotable` and exhiting them on a mobile app developed by using React-Native. A user can press on button or pull down the screen to refresh and see a new quote.
+- This project fetching random quotes from `https://opensourcelibs.com/lib/quotable` and exhiting them on a mobile app developed by using React-Native. A user can press on button or pull down the screen to refresh and see a new quote. To view quotes, a user needs to select a keyword from the list given in the settings a dropdown. If no keyword is select, a warning message will be displayed.
 
 ### Main page
 
