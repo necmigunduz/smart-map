@@ -17,7 +17,7 @@ const wait = timeout => {
 
 const Quote = () => {
   // Setting quote and its author to be published
-  const [quote, setQuote] = useState('Welcome to Quote of Day App!');
+  const [quote, setQuote] = useState('');
   const [auth, setAuth] = useState(null);
   // Setting state of refreshing for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
@@ -64,8 +64,8 @@ const Quote = () => {
           </View>
         ) : (
           <Text style={styles.loading}>
-            Click on Refresh button above or pull down to see the quote of the
-            day
+            Click on settings on the top and select a keyword, then pull down or
+            click on Refresh Quote button to see relevant quotes.
           </Text>
         )}
       </ScrollView>
@@ -130,9 +130,16 @@ const styles = StyleSheet.create({
     marginRight: 30,
   },
   loading: {
-    textAlign: 'center',
+    textAlign: 'justify',
     marginHorizontal: 50,
-    fontWeight: 'bold',
+    marginVertical: 50,
+    borderColor: '#fff',
+    borderWidth: 2,
+    borderRadius: 30,
+    backgroundColor: '#768799',
+    padding: 20,
+    color: '#fff',
+    opacity: 0.6,
   },
   dashes: {
     letterSpacing: 8,

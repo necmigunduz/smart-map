@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     height: 20,
   },
   pickerItem: {
-    backgroundColor: 'lightgray',
+    backgroundColor: 'lightblue',
     marginEnd: 2,
   },
   select: {
