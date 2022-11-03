@@ -33,16 +33,16 @@ const Quote = () => {
   const onRefresh = () => {
     setRefreshing(true);
     dispatch(getQuote(quotes.keyword));
-    setQuote(quotes.quotes.content);
-    setAuth(quotes.quotes.author);
+    setQuote(quotes.quote.content);
+    setAuth(quotes.quote.author);
     // Stopping spin
     wait(300).then(() => setRefreshing(false));
   };
   // Button to refresh quote
   const handleButton = () => {
     dispatch(getQuote(quotes.keyword));
-    setQuote(quotes.quotes.content);
-    setAuth(quotes.quotes.author);
+    setQuote(quotes.quote.content);
+    setAuth(quotes.quote.author);
     console.log(quotes.tags);
   };
 

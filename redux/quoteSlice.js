@@ -1,7 +1,7 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 
 const initialState = {
-  quotes: [],
+  quote: [],
   keyword: '',
 };
 export const getQuote = createAsyncThunk('quote/getQuote', async keyword => {
@@ -24,7 +24,7 @@ const quoteSlice = createSlice({
   },
   extraReducers: builder => {
     builder.addCase(getQuote.fulfilled, (state, action) => {
-      state.quotes = action.payload;
+      state.quote = action.payload;
     });
   },
 });
