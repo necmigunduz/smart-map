@@ -4,7 +4,10 @@
 
 ### Main page
 
-![Photo](https://github.com/necmigunduz/smart-map/blob/master/assets/screenshot.jpeg)
+![Photo](https://github.com/necmigunduz/smart-map/blob/master/assets/s1.jpeg)
+![Photo](https://github.com/necmigunduz/smart-map/blob/master/assets/s2.jpeg)
+![Photo](https://github.com/necmigunduz/smart-map/blob/master/assets/s3.jpeg)
+![Photo](https://github.com/necmigunduz/smart-map/blob/master/assets/s4.jpeg)
 
 ## Built with
 
@@ -22,13 +25,13 @@
 - create a 'local.properties' file in the android folder included in the root folder,
 - add the 'sdk.dir' adress in your operating system to 'local.properties' file,
   (For instance, if you are using Linux, add `sdk.dir = /home/USERNAME/Android/Sdk` to 'local.properties').
-- make sure JAVA_HOME is defined properly in your system, 
+- make sure JAVA_HOME is defined properly in your system,
   (Go to /usr/lib/jvm/ in your system folders and find the JDK folder, and then check JAVA_HOME by running `echo $JAVA_HOME`, make sure that the name of the JDK folder name is the same with 'JAVA_HOME'.)
-- `npx react-native  run-android` to install the app on your phone, or make sure your Android   Studio is running,
+- `npx react-native run-android` to install the app on your phone, or make sure your Android Studio is running,
 - `npx react-native start` to run the app.
 
-
 ## Author
+
 👤 **Necmi Gunduz**
 
 - LinkedIn: [Necmi Gunduz](https://www.linkedin.com/in/necmigunduz/)
@@ -47,7 +50,6 @@ Feel free to check the [issues page](issues/).
 Give a ⭐️ if you like this project!
 
 ## 👏 Acknowledgements
-
 
 ## 📝 License
 
