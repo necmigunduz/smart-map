@@ -17,8 +17,8 @@ const quoteSlice = createSlice({
   name: 'quote',
   initialState: initialState,
   reducers: {
+    // Set keyword coming from settings dropdown
     setKey: (state, action) => {
-      // console.log(state, action);
       state.keyword = action.payload;
     },
   },

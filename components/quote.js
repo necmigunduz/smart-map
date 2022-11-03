@@ -32,6 +32,7 @@ const Quote = () => {
   // Function to refresh quote upon a pulldown
   const onRefresh = () => {
     setRefreshing(true);
+    // Get keyword from Redux store and make a Get API call with it
     dispatch(getQuote(quotes.keyword));
     setQuote(quotes.quote.content);
     setAuth(quotes.quote.author);

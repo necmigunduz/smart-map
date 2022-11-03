@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+// react-native-picker/picker library for dropdown
 import {Picker} from '@react-native-picker/picker';
 import {useDispatch} from 'react-redux';
 import {setKey} from '../redux/quoteSlice';
 
 const Settings = () => {
+  // set keyword from dropdown
   const [keyword, setKeyword] = useState();
   const dispatch = useDispatch();
+  // send keyword from state to Redux store
   useEffect(() => {
     dispatch(setKey(keyword));
   }, [dispatch, keyword]);
@@ -14,13 +17,18 @@ const Settings = () => {
   return (
     <View style={styles.settings}>
       <Text style={styles.title}>Select a keyword</Text>
+      {/* Dropdown */}
       <Picker
         selectedValue={keyword}
         onValueChange={(itemValue, itemIndex) => {
           setKeyword(itemValue);
         }}
         style={styles.picker}>
-        <Picker.Item label="Please select an option..." value="0" />
+        <Picker.Item
+          label="Please select a keyword"
+          value="0"
+          style={styles.select}
+        />
         <Picker.Item
           label="Famous quotes"
           value="famous-quotes"
@@ -97,12 +105,16 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   picker: {
-    width: 200,
+    width: 260,
     height: 20,
   },
   pickerItem: {
     backgroundColor: 'lightgray',
     marginEnd: 2,
+  },
+  select: {
+    backgroundColor: '#5585b5',
+    color: 'white',
   },
   selected: {
     color: 'black',
