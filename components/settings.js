@@ -1,16 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
+import {useDispatch} from 'react-redux';
+import {setKey} from '../redux/quoteSlice';
 
 const Settings = () => {
   const [keyword, setKeyword] = useState();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setKey(keyword));
+  }, [dispatch, keyword]);
+
   return (
     <View style={styles.settings}>
       <Text style={styles.title}>Select a keyword</Text>
       <Picker
         selectedValue={keyword}
-        onValueChange={(itemValue, itemIndex) => setKeyword(itemValue)}
+        onValueChange={(itemValue, itemIndex) => {
+          setKeyword(itemValue);
+        }}
         style={styles.picker}>
+        <Picker.Item label="Please select an option..." value="0" />
         <Picker.Item
           label="Athletics"
           value="athletics"

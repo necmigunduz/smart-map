@@ -10,7 +10,6 @@ import {
 import {useDispatch, useSelector} from 'react-redux';
 import {getQuote} from '../redux/quoteSlice';
 import {StyleSheet} from 'react-native';
-
 // Creating wait function to end spinning when a user pulls down to refresh
 const wait = timeout => {
   return new Promise(resolve => setTimeout(resolve, timeout));
@@ -22,25 +21,28 @@ const Quote = () => {
   const [auth, setAuth] = useState(null);
   // Setting state of refreshing for RefreshControl
   const [refreshing, setRefreshing] = useState(false);
-  // Accessing state through Redux Toolkit store
-  const {quotes} = useSelector(state => state.quotes);
+  // Accessing state (keyword and quotes) through Redux Toolkit store
+  const {quotes} = useSelector(state => ({
+    keyword: state.keyword,
+    quotes: state.quotes,
+  }));
+  console.log(quotes);
   // Definee dispatch function to call actions from quoteSlice
   const dispatch = useDispatch();
   // Function to refresh quote upon a pulldown
   const onRefresh = () => {
     setRefreshing(true);
-    dispatch(getQuote());
-    setQuote(quotes.content);
-    setAuth(quotes.author);
-    console.log(quotes.tags);
+    dispatch(getQuote(quotes.keyword));
+    setQuote(quotes.quotes.content);
+    setAuth(quotes.quotes.author);
     // Stopping spin
     wait(300).then(() => setRefreshing(false));
   };
   // Button to refresh quote
   const handleButton = () => {
-    dispatch(getQuote());
-    setQuote(quotes.content);
-    setAuth(quotes.author);
+    dispatch(getQuote(quotes.keyword));
+    setQuote(quotes.quotes.content);
+    setAuth(quotes.quotes.author);
     console.log(quotes.tags);
   };
 
