@@ -32,7 +32,7 @@ const Quote = () => {
     dispatch(getQuote());
     setQuote(quotes.content);
     setAuth(quotes.author);
-    console.log(quote);
+    console.log(quotes.tags);
     // Stopping spin
     wait(300).then(() => setRefreshing(false));
   };
@@ -41,7 +41,7 @@ const Quote = () => {
     dispatch(getQuote());
     setQuote(quotes.content);
     setAuth(quotes.author);
-    console.log(quote);
+    console.log(quotes.tags);
   };
 
   return (
